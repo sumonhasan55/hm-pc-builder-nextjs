@@ -1,0 +1,59 @@
+{
+    "components": [
+        {
+          "id": 1,
+          "Image": "/images/C-fan.jpg",
+          "ProductName": "Cooling-Fan",
+          "Category": "Processor",
+          "Price": 499.99,
+          "Status": "In Stock",
+          "Rating": 4.8
+        },
+        {
+          "id": 2,
+          "Image": "/images/Pc-case.jpg",
+          "ProductName": "Pc-Case",
+          "Category": "Case",
+          "Price": 799.99,
+          "Status": "In Stock",
+          "Rating": 4.9
+        },
+        {
+          "id": 3,
+          "Image": "/images/harddisk.jpg",
+          "ProductName": "Harddisk-Drive",
+          "Category": "Storage",
+          "Price": 79.99,
+          "Status": "In Stock",
+          "Rating": 4.7
+        },
+        {
+          "id": 4,
+          "Image": "/images/motherboard.jpg",
+          "ProductName": "Mother-Board",
+          "Category": "Motherboard",
+          "Price": 169.99,
+          "Status": "Out of Stock",
+          "Rating": 4.6
+        },
+        {
+          "id": 5,
+          "Image": "/images/Ram.jpg",
+          "ProductName": "Ram-DDR",
+          "Category": "Memory",
+          "Price": 149.99,
+          "Status": "In Stock",
+          "Rating": 4.8
+        },
+        {
+          "id": 6,
+          "Image": "/images/pc processor.jpg",
+          "ProductName": "Intel-Processor",
+          "Category": "Processor",
+          "Price": 129.99,
+          "Status": "In Stock",
+          "Rating": 4.5
+        }
+      ]
+      
+}
