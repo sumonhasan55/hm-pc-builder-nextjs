@@ -14,7 +14,7 @@ const ProductsDetailsPage = ({ product }) => {
                         <p className="py-2"><span className="font-bold ">Description:</span> {product?.Description}</p>
                         <p className="py-2"><span className="font-bold ">Status:</span> {product?.Status}</p>
                         <p className="py-2"><span className="font-bold ">Price:</span> {product?.Price}</p>
-                        <p className="py-2"><span className="font-bold ">KeyFeatures:</span> {product?.KeyFeatures.Specification}</p>
+                        <p className="py-2"><span className="font-bold ">KeyFeatures:</span> {product?.KeyFeatures?.Specification}</p>
                         <p className="py-2"><span className="font-bold ">IndividualRating:</span> {product?.IndividualRating}</p>
                         <p className="py-2"><span className="font-bold ">AverageRating:</span> {product?.AverageRating}</p>
                         <p className="py-2"><span className="font-bold ">Reviews:</span> {product?.Reviews}</p>

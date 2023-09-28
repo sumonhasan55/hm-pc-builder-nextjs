@@ -3,7 +3,38 @@
       {
         "id": 1,
         "ProductName": "NVIDIA GeForce RTX 3090",
-        "Category": "Graphics Card",
+        "CategoryName":"Graphics Card",
+        "category": {
+          "id": 1,
+          "name":"Graphics Card",
+          "products": [
+           {
+            "ProductName": "Nvidia GeForce RTX 2060",
+            "Price": 119.99,
+            "Image": "/images/graphics_card1.jpg",
+            "category":"GraphicsCard",
+            "Status": "In Stock",
+            "Rating": 4.6
+
+           },
+           {
+            "ProductName": "Nvidia GeForce RTX 3330",
+            "Price": 219.99,
+            "Image": "/images/graphics_card2.jpg",
+            "category":"GraphicsCard",
+            "Status": "In Stock",
+            "Rating": 4.0
+           },
+           {
+            "ProductName": "Nvidia GeForce RTX 1010",
+            "Price": 319.99,
+            "Image": "/images/graphics_card3.jpg",
+            "category":"GraphicsCard",
+            "Status": "In Stock",
+            "Rating": 4.4
+           }
+          ]
+        },
         "Status": "In Stock",
         "Price": 1499.99,
         "Description": "The NVIDIA GeForce RTX 3090 is the ultimate gaming graphics card with unmatched performance and ray tracing capabilities.",
@@ -23,12 +54,44 @@
           "Expensive, but worth every penny for enthusiasts.",
           "Handles 4K gaming with ease."
         ],
-        "Image": "/images/graphics_card.jpg"
+        "Image": "/images/graphics_card.jpg",
+        "Rating": 4.8
       },
       {
         "id": 2,
         "ProductName": "AMD Ryzen 7 5800X",
-        "Category": "Processor",
+        "CategoryName":"Processor",
+        "category": {
+          "id": 2,
+          "name":"Processor",
+          "products": [
+           {
+            "ProductName": "Intel Core i5-12100 12th Gen",
+            "Price": 119.99,
+            "Image": "/images/processor1.jpg",
+            "category":"Processor",
+            "Status": "In Stock",
+            "Rating": 4.2
+
+           },
+           {
+            "ProductName": "Intel Core i3-12100 12th Gen",
+            "Price": 119.99,
+            "Image": "/images/processor2.jpg",
+            "category":"Processor",
+            "Status": "In Stock",
+            "Rating": 4.1
+           },
+           {
+            "ProductName": "Intel Core i7-12100 12th Gen",
+            "Price": 119.99,
+            "Image": "/images/processor3.jpg",
+            "category":"Processor",
+            "Status": "In Stock",
+            "Rating": 4.0
+           }
+          ]
+        },
         "Status": "In Stock",
         "Price": 449.99,
         "Description": "The AMD Ryzen 7 5800X is a high-performance 8-core, 16-thread processor designed for gamers and content creators.",
@@ -46,12 +109,44 @@
           "Overclocks well for enthusiasts.",
           "AMD continues to impress with their Ryzen lineup."
         ],
-        "Image": "/images/pc processor.jpg"
+        "Image": "/images/pc processor.jpg",
+        "Rating": 4.6
       },
       {
         "id": 3,
         "ProductName": "Corsair Vengeance LPX RAM",
-        "Category": "Memory",
+        "CategoryName":"Ram",
+        "category": {
+          "id": 3,
+          "name":"Ram",
+          "products": [
+           {
+            "ProductName": "DDR3 16GB Desktop Computer RAM ",
+            "Price": 2119.99,
+            "Image": "/images/ram1.jpg",
+            "category":"",
+            "Status": "In Stock",
+            "Rating": 4.9
+
+           },
+           {
+            "ProductName": "DDR3 8GB Desktop Computer RAM ",
+            "Price": 1189.99,
+            "Image": "/images/ram2.jpg",
+            "category":"",
+            "Status": "In Stock",
+            "Rating": 4.1
+           },
+           {
+            "ProductName": "DDR4 2GB Desktop Computer RAM ",
+            "Price": 1889.99,
+            "Image": "/images/ram3.jpg",
+            "category":"",
+            "Status": "In Stock",
+            "Rating": 4.8
+           }
+          ]
+        },
         "Status": "Out of Stock",
         "Price": 99.99,
         "Description": "Corsair Vengeance LPX RAM offers reliable and fast DDR4 memory for gaming and productivity tasks.",
@@ -69,12 +164,44 @@
           "Frequent stock shortages, but worth the wait.",
           "Low-profile design fits in most cases."
         ],
-        "Image": "/images/Ram.jpg"
+        "Image": "/images/Ram.jpg",
+        "Rating": 4.2
       },
       {
         "id": 4,
         "ProductName": "Samsung 980 PRO NVMe SSD",
-        "Category": "Storage",
+        "CategoryName":"Hard Disk",
+        "category": {
+          "id": 4,
+          "name":"Hard Disk",
+          "products": [
+           {
+            "ProductName": "Western Hard Disk TOSHIBA e-Studio",
+            "Price": 1119.99,
+            "Image": "/images/hdd1.jpg",
+            "category":"Hard Disk",
+            "Status": "In Stock",
+            "Rating": 4.8
+
+           },
+           {
+            "ProductName": "Samsung 980 PRO NVMe SSD",
+            "Price": 2119.99,
+            "Image": "/images/hdd2.jpg",
+            "category":"Hard Disk",
+            "Status": "In Stock",
+            "Rating": 4.3
+           },
+           {
+            "ProductName": "Toshiba SSD PRO MAX",
+            "Price": 3119.99,
+            "Image": "/images/hdd3.jpg",
+            "category":"Hard Disk",
+            "Status": "In Stock",
+            "Rating": 4.2
+           }
+          ]
+        },
         "Status": "In Stock",
         "Price": 199.99,
         "Description": "The Samsung 980 PRO NVMe SSD offers blazing-fast storage performance for gaming and productivity.",
@@ -93,12 +220,44 @@
           "Samsung's quality and reliability shine through.",
           "Worth the premium for PCIe Gen 4.0 speed."
         ],
-        "Image": "/images/harddisk.jpg"
+        "Image": "/images/harddisk.jpg",
+        "Rating": 4.9
       },
       {
         "id": 5,
         "ProductName": "MSI MPG B550 Gaming Edge WiFi Motherboard",
-        "Category": "Motherboard",
+        "CategoryName":"Motherboard",
+        "category": {
+          "id": 5,
+          "name":"Motherboard",
+          "products": [
+           {
+            "ProductName": "GA-H110M-S2PV Motherboard" ,
+            "Price": 1319.99,
+            "Image": "/images/m_board1.jpg",
+            "category":"",
+            "Status": "In Stock",
+            "Rating": 4.2
+
+           },
+           {
+            "ProductName": "GA-H120M-S2PV Motherboard",
+            "Price": 1519.99,
+            "Image": "/images/m_board2.jpg",
+            "category":"",
+            "Status": "In Stock",
+            "Rating": 4.4
+           },
+           {
+            "ProductName": "GA-H130M-S2PV Motherboard",
+            "Price": 1619.99,
+            "Image": "/images/m_board3.jpg",
+            "category":"",
+            "Status": "In Stock",
+            "Rating": 4.6
+           }
+          ]
+        },
         "Status": "In Stock",
         "Price": 179.99,
         "Description": "The MSI MPG B550 Gaming Edge WiFi motherboard offers excellent gaming performance and connectivity options.",
@@ -117,12 +276,44 @@
           "Easy to overclock and tweak settings in the BIOS.",
           "MSI delivers another winner in the MPG series."
         ],
-        "Image": "/images/motherboard.jpg"
+        "Image": "/images/motherboard.jpg",
+        "Rating": 4.6
       },
       {
         "id": 6,
         "ProductName": "EVGA 850W 80+ Gold Modular Power Supply",
-        "Category": "Power Supply",
+        "CategoryName":"Power Supply",
+        "category": {
+          "id": 6,
+          "name":"Power Supply",
+          "products": [
+           {
+            "ProductName": "EVGA 850W 80+ Gold Modular Power Supply",
+            "Price": 119.99,
+            "Image": "/images/power_1.webp",
+            "category":"PowerSupply",
+            "Status": "In Stock",
+            "Rating": 5.0
+
+           },
+           {
+            "ProductName": "EVGA 1250W 80+ Gold Modular Power Supply",
+            "Price": 119.99,
+            "Image": "/images/power_2.webp",
+            "category":"PowerSupply",
+            "Status": "In Stock",
+            "Rating": 4.9
+           },
+           {
+            "ProductName": "EVGA 5550W 80+ Gold Modular Power Supply",
+            "Price": 119.99,
+            "Image": "/images/power_3.webp",
+            "category":"PowerSupply",
+            "Status": "In Stock",
+            "Rating": 4.2
+           }
+          ]
+        },
         "Status": "In Stock",
         "Price": 119.99,
         "Description": "The EVGA 850W 80+ Gold Modular Power Supply delivers stable and efficient power for demanding PC configurations.",
@@ -140,11 +331,11 @@
           "Efficient operation and quiet fan.",
           "A great choice for high-end systems."
         ],
-        "Image": "/images/C-fan.jpg"
+        "Image": "/images/C-fan.jpg",
+        "Rating": 4.5
       }
     ]
     
-      
 }
 
 

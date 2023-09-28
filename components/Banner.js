@@ -7,9 +7,9 @@ const Banner = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="text-center hero-content text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <h1 className="mb-5 text-5xl font-bold">Best Desktop PC Shop In Bangladesh</h1>
+                        <p className="mb-5">HM-Pc Builder is the most popular Laptop Brand Shop in BD. Star Tech Laptop Shop has the perfect device, whether you are a freelancer, officegoer, or student.</p>
+                        
                     </div>
                 </div>
             </div>

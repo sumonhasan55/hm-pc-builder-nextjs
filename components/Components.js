@@ -9,6 +9,7 @@ const Components = ({ components }) => {
 
                 {
                     components.map((component) => (
+                        // eslint-disable-next-line react/jsx-key
                         <div className="w-full shadow-xl card bg-base-100">
                             <figure className="px-10 pt-10">
                                 <img src={component?.Image} alt="Shoes" className="h-64 rounded-xl w-96" />
@@ -16,7 +17,7 @@ const Components = ({ components }) => {
                             <div className="items-center text-center card-body">
                                 <h2 className="font-extrabold card-title">{component?.ProductName}</h2>
                                 <p className='font-semibold te'>Price:{component?.Price}$</p>
-                                <p className='font-semibold '>Category:{component?.Category}</p>
+                                <p className='font-semibold '>Category:{component?.CategoryName}</p>
                                 <p className='font-semibold'>Status:{component?.Status}</p>
                             </div>
                         

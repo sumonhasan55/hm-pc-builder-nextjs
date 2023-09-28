@@ -1,7 +1,8 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import { Provider } from 'react-redux';
+import { store } from '@/redux/store';
 import '@/styles/globals.css'
-
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -16,12 +17,14 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-   
-         <Navbar></Navbar>
-          
-          <Component key={router.asPath} {...pageProps} />
-          <Footer></Footer>
+      <Provider store={store}>
+        <Navbar></Navbar>
+        {
 
+          <Component key={router.asPath} {...pageProps} />
+        }
+        <Footer></Footer>
+      </Provider>
 
     </>
 

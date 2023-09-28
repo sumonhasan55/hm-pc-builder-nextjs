@@ -1,18 +1,31 @@
+import Head from "next/head";
 import Link from "next/link";
 
 
 const featuredCategory = ({ products }) => {
     return (
+        <>
+        <Head>
+        <title>HM_PC_Builder</title>
+        <meta
+          name="description"
+          content="This is news portal of programming hero made by next-js"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+        
         <div>
         <h1 className='my-10 text-5xl font-bold text-center '>Featured Category </h1>
         <div class="grid grid-cols-1 w-full items-center md:grid-cols-3  mx-auto gap-4  my-5">
 
             {
                 products.map((product) => (
+                    // eslint-disable-next-line react/jsx-key
                     <Link href={`/component/${product?.id}`}>
                     <div className="w-full shadow-xl card bg-base-100">
                         <figure className="px-10 pt-10">
-                            <img src={product?.Image} alt="Shoes" onClick={console.log("me")} className="h-64 rounded-xl w-96" />
+                            <img src={product?.Image} alt=" "  className="h-64 rounded-xl w-96" />
                         </figure>
                         <div className="items-center text-center card-body">
                             <h2 className="font-extrabold card-title">{product?.ProductName}</h2>
@@ -39,6 +52,7 @@ const featuredCategory = ({ products }) => {
 
 
     </div>
+    </>
     );
 };
 
