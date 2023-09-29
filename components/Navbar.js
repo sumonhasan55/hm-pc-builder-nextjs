@@ -24,7 +24,10 @@ const Navbar = () => {
             <li><a>Others</a></li>
           </ul>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a>Offers</a></li>
+      <li><a>Contact</a></li>
+      <li><a>About</a></li>
+      <li><Link href="/login">Login</Link></li>
       </ul>
     </div>
    <Link href="/" className="text-xl normal-case btn btn-ghost" >HM-Pc-Builder</Link>
@@ -49,7 +52,7 @@ const Navbar = () => {
       <li><a>Offers</a></li>
       <li><a>Contact</a></li>
       <li><a>About</a></li>
-      <li><a>Account</a></li>
+      <li><Link href="/login">Login</Link></li>
     
     </ul>
   </div>

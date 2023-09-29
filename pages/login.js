@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import auth from "@/firebase/firebase.auth";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { FaGithub, FaGoogle  } from "react-icons/fa";
 
 
 
@@ -27,17 +28,19 @@ const LoginPage = () => {
   return (
     <div>
       <Head>
-        <title>W-NP Login</title>
+        <title>HM PC BuilderLogin</title>
       </Head>
       <div className={styles.form}>
-        <h3>LOGIN</h3>
+        <h3 className="text-xl">Login</h3>
         <div className={styles.social_icons}>
-          <button onClick={()=>signIn("google",{
+          <button> <FaGoogle onClick={()=>signIn("google",{
              callbackUrl:"http://localhost:3000/"
-          })}>Google</button>
-          <button  onClick={()=>signIn("github",{
+          })}/></button>
+         
+        
+         <button> <FaGithub onClick={()=>signIn("github",{
             callbackUrl:"http://localhost:3000/"
-          })}>GitHub</button>
+          })}/></button>
         </div>
         <hr />
         <form onSubmit={handleSubmit(onSubmit)}>
