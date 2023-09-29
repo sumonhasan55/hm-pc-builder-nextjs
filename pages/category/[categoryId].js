@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { connect, } from 'react-redux';
 
 
-
 const AllProductsPage = ({ products }) => {
 
   return (
@@ -28,7 +27,6 @@ const AllProductsPage = ({ products }) => {
       
       {
         products?.map((product) => (
-         
           <div className="my-5 h-80 lg:h-60 hero bg-base-200">
             <div className="flex-col border-2 border-black hero-content lg:flex-row rounded-xl">
               <img src={product?.Image} className="max-w-sm rounded-lg shadow-2xl h-36 w-28" />
@@ -69,7 +67,6 @@ export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(`https://pc-builder-data.onrender.com/components/${params.categoryId}`)
   const data = await res.json();
-  
   return {
     props: {
       products: data.category.products

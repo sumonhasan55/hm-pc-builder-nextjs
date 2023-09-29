@@ -7,15 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 const pcBuilderPage = ( ) => {
-    
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch();
     const { data, isLoading, isError, error } = useGetProductsQuery();
-    //console.log(data)
     const sucessAlert = () => alert("Congratulations! Sucessfuly You Are Create Your PC!!!");
 
-
-    
     return (
         <>
         <Head>
@@ -52,9 +48,7 @@ const pcBuilderPage = ( ) => {
            <div className="my-10">
            <div className="p-3 mx-auto text-center text-white rounded-lg lg:w-1/5 bg-primary">
            <span>Total Selected Products: {count}</span>
-           
            </div>
-
            <div className="p-3 mx-auto font-semibold text-center">
            {
             count > 4 ? <Link href="/"><button onClick={sucessAlert} className="btn btn-active btn-accent" >Complete Build</button></Link> :
@@ -71,10 +65,7 @@ const pcBuilderPage = ( ) => {
 };
 
 
-
-
 export default pcBuilderPage;
-
 
 
 export const getServerSideProps = async () => {
