@@ -23,8 +23,12 @@ const AllProductsPage = ({ products }) => {
 
 
     <div>
+       
+    <h1 className='my-5 font-bold text-center lg:text-5xl '>Please! Choose a Product & Click addToBuilder   </h1>
+      
       {
         products?.map((product) => (
+         
           <div className="my-5 h-80 lg:h-60 hero bg-base-200">
             <div className="flex-col border-2 border-black hero-content lg:flex-row rounded-xl">
               <img src={product?.Image} className="max-w-sm rounded-lg shadow-2xl h-36 w-28" />
@@ -43,10 +47,12 @@ const AllProductsPage = ({ products }) => {
               </div>
             </div>
           </div>
+          
         ))
       }
 
     </div>
+    
     </>
   );
 };
