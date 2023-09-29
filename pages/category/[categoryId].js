@@ -61,7 +61,7 @@ export default connect(null, mapDispatchToProps)(AllProductsPage);
 
 export const getServerSideProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/components/${params.categoryId}`)
+  const res = await fetch(`https://pc-builder-data.onrender.com/components/${params.categoryId}`)
   const data = await res.json();
   
   return {

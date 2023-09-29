@@ -28,7 +28,7 @@ export default HomePage;
 
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:5000/components")
+  const res = await fetch("https://pc-builder-data.onrender.com/components")
   const data = await res.json()
   console.log(data)
 
