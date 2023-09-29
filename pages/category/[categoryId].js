@@ -1,17 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-key */
 import { addToBuild } from '@/redux/features/builder/builderSlice';
 import Head from 'next/head';
 import Link from 'next/link';
 import { connect, } from 'react-redux';
 
-import 'react-toastify/dist/ReactToastify.css';
-
-
-
 
 
 const AllProductsPage = ({ products }) => {
-
-  
 
   return (
     <>
@@ -42,7 +38,6 @@ const AllProductsPage = ({ products }) => {
                   </div>
                   <div>
                     <Link href="/pcBuilder" className="btn btn-neutral"> <button>Add To Builder</button></Link>
-
                   </div>
                 </div>
               </div>

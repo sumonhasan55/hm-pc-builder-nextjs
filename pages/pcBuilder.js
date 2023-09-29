@@ -1,20 +1,17 @@
 import Link from "next/link";
-
-import { useDispatch, useSelector } from 'react-redux';
 import { addToBuild } from '../redux/features/builder/builderSlice'
-
 import { useGetProductsQuery } from "@/redux/api/api";
 import Head from "next/head";
+import { useDispatch, useSelector } from "react-redux";
+
 
 
 const pcBuilderPage = ( ) => {
     
     const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch()
-
+    const dispatch = useDispatch();
     const { data, isLoading, isError, error } = useGetProductsQuery();
-    console.log(data)
-
+    //console.log(data)
     const sucessAlert = () => alert("Congratulations! Sucessfuly You Are Create Your PC!!!");
 
 
