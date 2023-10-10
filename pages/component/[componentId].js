@@ -1,11 +1,17 @@
-
+import Image from "next/image";
 
 const ProductsDetailsPage = ({ product }) => {
     return (
         <>
             <div className="min-h-screen hero bg-base-200">
                 <div className="flex-col hero-content lg:flex-row">
-                    <img src={product?.Image} className="h-full max-w-sm rounded-lg shadow-2xl" />
+                <Image
+                    src={product?.Image}
+                    alt={product?.ProductName}
+                    width={384} // Set your desired width
+                    height={256} // Set your desired height
+                    className="h-64 rounded-xl w-96"
+                  />
 
                     <div className="p-8">
                         <h1 className="text-5xl font-bold">{product?.ProductName}</h1>

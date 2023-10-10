@@ -1,14 +1,20 @@
+import auth from '@/firebase/firebase.config';
 import Link from 'next/link';
 import React from 'react';
-import { useSession, signIn, signOut } from "next-auth/react"
-import auth from "@/firebase/firebase.auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from 'firebase/auth';
+
 
 
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
-  const { data: session } = useSession()
+  const logout = () => {
+    signOut(auth);
+  };
+
+  
+ 
   return (
     <>
       <div className="navbar bg-base-100">
@@ -35,22 +41,22 @@ const Navbar = () => {
               <li><a>Contact</a></li>
               <li><a>About</a></li>
               {
-                session?.user?(
+                user?.email ?
                 <li ><a>
                      <button
-                  onClick={() => signOut()}
+                 onClick={logout}
                 >
                   Logout
                 </button>
                 </a>
                  
                 </li>
-                ):(
+                :
                  <li>
-                   <a href='/login'>login</a>
+                   <Link href='/login'>login</Link>
                  </li>
 
-                )
+                
               }
               
             </ul>
@@ -79,22 +85,22 @@ const Navbar = () => {
             <li><a>About</a></li>
             
             {
-                session?.user?(
-                <li><a>
+                user?.email ?
+                <li >
                      <button
-                  onClick={() => signOut()}
+                  onClick={logout}
                 >
                   Logout
                 </button>
-                </a>
+                
                  
                 </li>
-                ):(
-                 <li><a href='/login'>login</a>
-                  
+                :
+                 <li>
+                   <Link href='/login'>login</Link>
                  </li>
 
-                )
+                
               }
             
 
@@ -102,7 +108,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
 
-          <Link href="/pcBuilder" className="btn btn-neutral"> PC Builder</Link>
+       {
+        user?.email ?    <Link href="/pcBuilder" className="btn btn-neutral"> PC Builder</Link> :
+        <Link href="/login" className="btn btn-neutral"> PC Builder</Link>
+       }
         </div>
       </div>
 

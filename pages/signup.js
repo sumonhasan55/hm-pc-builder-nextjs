@@ -1,49 +1,48 @@
-
+// pages/signup.js
+import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
-
-import Head from "next/head";
-import styles from "@/styles/Login.module.css";
-import { signIn } from "next-auth/react";
+import styles from '../styles/Login.module.css';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Link from 'next/link';
+import auth from '@/firebase/firebase.config';
 
-const LoginPage = () => {
-   const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data)=>console.log(data)
+const Signup = () => {
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+  const router = useRouter();
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      await createUserWithEmailAndPassword(data.email, data.password);
+      router.back();
+    } catch (error) {
+      console.error("Error registering:", error);
+    }
+  };
+
   return (
-    <div>
-      <Head>
-        <title>SignUp</title>
-      </Head>
-      <div className={styles.form}>
-        <h3>SIGNUP</h3>
-        {/* <div className={styles.social_icons}>
-          <GoogleOutlined onClick={()=>signIn("google",{
-            callbackUrl:"http://localhost:3000/"
-          })} />
-          <GithubOutlined onClick={()=>signIn("github",{
-            callbackUrl:"http://localhost:3000/"
-          })} />
-        </div> */}
-        <hr />
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="">Your Email</label>
-          <input {...register('email', { required: true })} type="email" />
-          <label htmlFor="">Your Password</label>
-          <input {...register('passwword', { required: true })} type="password" />
-          <button type="submit">SIGNUP</button><br></br>
-          <p>All Ready Have an Account?</p> <Link href="login" type='link'>LOGIN</Link>
-        </form>
+    <>
+      <div className="min-h-screen hero bg-gradient-to-r from-violet-500 to-fuchsia-500">
+        <div className={styles.form}>
+          <h3 className='my-5 text-5xl font-bold'>Register!</h3>
+          <hr />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="">Your Email</label>
+            <input {...register('email', { required: true })} type="email" className='text-black bg-white '/>
+            <label htmlFor="">Your Password</label>
+            <input {...register('password', { required: true })} type="password" className='text-black bg-white '  />
+            <button className='btn btn-primary ' type="submit">Register</button><br></br><br></br>
+            <Link href="/login" className="my-5 mt-5 underline">Already Have An Account?</Link>
+          </form>
+        </div>
       </div>
-      <Link href="/">
-        <button>Back To Home</button>
-      </Link>
-    </div>
+    </>
   );
 };
 
-
-export default LoginPage;
+export default Signup;
