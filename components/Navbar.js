@@ -5,8 +5,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from 'firebase/auth';
 
 
-
-
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
@@ -93,7 +91,6 @@ const Navbar = () => {
                   Logout
                 </button>
                 
-                 
                 </li>
                 :
                  <li>
