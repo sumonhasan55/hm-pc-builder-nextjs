@@ -4,11 +4,16 @@ import { useForm } from 'react-hook-form';
 import styles from '../styles/Login.module.css';
 import Link from 'next/link';
 import auth from '@/firebase/firebase.config';
+import { useSession, signIn, signOut } from "next-auth/react"
+
+
 
 const Login = () => {
   const [signInWithEmailAndPassword, error] = useSignInWithEmailAndPassword(auth);
   const router = useRouter();
   const { register, handleSubmit } = useForm();
+
+  
 
   const onSubmit = async (data) => {
     try {
@@ -24,6 +29,7 @@ const Login = () => {
       <div className="min-h-screen hero bg-gradient-to-r from-sky-500 to-indigo-500">
         <div className={styles.form}>
           <h3 className="my-5 text-5xl font-bold">Login!</h3>
+          <button onClick={() => signIn()}>Github</button>
           <hr />
           <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="">Your Email</label>

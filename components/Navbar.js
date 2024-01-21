@@ -11,8 +11,6 @@ const Navbar = () => {
     signOut(auth);
   };
 
-  
- 
   return (
     <>
       <div className="navbar bg-base-100">
@@ -40,23 +38,30 @@ const Navbar = () => {
               <li><a>About</a></li>
               {
                 user?.email ?
-                <li ><a>
-                     <button
-                 onClick={logout}
-                >
-                  Logout
-                </button>
-                </a>
-                 
-                </li>
-                :
-                 <li>
-                   <Link href='/login'>login</Link>
-                 </li>
+                  <li ><a>
+                    <button
+                      onClick={logout}
+                    >
+                      Logout
+                    </button>
+                  </a>
 
-                
+                  </li>
+                  :
+                  <li>
+                    <Link href='/login'>login</Link>
+                  </li>
+
+
               }
-              
+
+             
+
+             
+
+
+
+
             </ul>
           </div>
           <Link href="/" className="text-xl normal-case btn btn-ghost" >HM-Pc-Builder</Link>
@@ -81,34 +86,34 @@ const Navbar = () => {
             <li><a>Offers</a></li>
             <li><a>Contact</a></li>
             <li><a>About</a></li>
-            
+
             {
-                user?.email ?
+              user?.email ?
                 <li >
-                     <button
-                  onClick={logout}
-                >
-                  Logout
-                </button>
-                
+                  <button
+                    onClick={logout}
+                  >
+                    Logout
+                  </button>
+
                 </li>
                 :
-                 <li>
-                   <Link href='/login'>login</Link>
-                 </li>
+                <li>
+                  <Link href='/login'>login</Link>
+                </li>
 
-                
-              }
-            
+
+            }
+
 
           </ul>
         </div>
         <div className="navbar-end">
 
-       {
-        user?.email ?    <Link href="/pcBuilder" className="btn btn-neutral"> PC Builder</Link> :
-        <Link href="/login" className="btn btn-neutral"> PC Builder</Link>
-       }
+          {
+            user?.email ? <Link href="/pcBuilder" className="btn btn-neutral"> PC Builder</Link> :
+              <Link href="/login" className="btn btn-neutral"> PC Builder</Link>
+          }
         </div>
       </div>
 
